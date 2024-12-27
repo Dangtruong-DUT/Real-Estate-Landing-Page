@@ -47,7 +47,11 @@ a {
 }
 
 .hero-wrapper {
-    background: #E6F0FF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #e6f0ff;
     height: calc(100vh - 90px);
 }
 
@@ -97,21 +101,18 @@ a {
 
 .navbar .action-btn {
     padding: 13px 16px;
+    border-radius: 8px;
 }
 
 .navbar ul a:hover {
     text-decoration: underline;
 }
 
-.hero {
-    padding-top: 130px;
-}
-
-.hero .info {
+.hero-wrapper .info {
     width: 53.3%;
 }
 
-.hero .sub-title {
+.hero-wrapper .sub-title {
     color: #687690;
     font-size: 1.8rem;
     font-weight: 500;
@@ -119,7 +120,7 @@ a {
     letter-spacing: 0.01em;
 }
 
-.hero .title {
+.hero-wrapper .title {
     margin-top: 8px;
     color: #000336;
     font-size: 6.4rem;
@@ -127,7 +128,8 @@ a {
     line-height: 1.19;
 }
 
-.hero .desc {
+.hero-wrapper .desc {
+    margin-top: 30px;
     color: #5A6473;
     font-size: 1.8rem;
     font-weight: 400;
@@ -190,7 +192,7 @@ a {
 
 .guides {
     margin-top: 40px;
-    padding: 79px 0;
+    padding: 93px 0 79px;
 }
 
 .guides .sub-title {
@@ -318,8 +320,7 @@ a {
 .featured .item {
     flex: 1;
     background-color: #fff;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-radius: 12px;
 }
 
 .featured .item .thumb {
@@ -376,11 +377,11 @@ a {
 /*======== stats ======== */
 .stats {
     margin-top: 75px;
-    padding: 50px;
+    padding: 50px 0;
 }
 
 .stats .content {
-    width: 1017px;
+    width: 1048px;
 }
 
 .stats .row {
@@ -622,6 +623,7 @@ a {
 
 .footer .desc {
     white-space: normal;
+    line-height: 1.75;
 }
 
 .footer .social {
