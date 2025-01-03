@@ -39,9 +39,36 @@
 </head>
 
 <body>
+    <!-- Tablet/mobile header -->
+    <header class="mobile-header">
+        <input type="checkbox" class="menu-checkbox" id="menu-checkbox" hidden>
+        <label for="menu-checkbox" class="menu-overlay"></label>
+        <label for="menu-checkbox" class="menu-drawer">
+            <!-- Logo -->
+            <div class="logo logo--mobile">
+                <a href="#home">
+                    <img src="./assets/image/logo.svg" alt="Besnik" />
+                </a>
+            </div>
+            <!-- navigation -->
+            <ul id="nav-mobile">
+
+            </ul>
+
+        </label>
+    </header>
+
+    <!-- PC header -->
     <header class="fixed-header">
         <div class="content">
             <nav class="navbar">
+                <!-- Tablet/mobile menu -->
+                <label for="menu-checkbox" class="toggle-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 100 100">
+                        <path fill="currentColor"
+                            d="M81.232 15.138H18.769a3.407 3.407 0 0 0-3.407 3.407v3.143a3.407 3.407 0 0 0 3.407 3.407h62.463a3.407 3.407 0 0 0 3.407-3.407v-3.143a3.407 3.407 0 0 0-3.407-3.407m-62.463 29.87h45.634a3.407 3.407 0 0 0 3.407-3.407v-3.143a3.407 3.407 0 0 0-3.407-3.407H18.769a3.407 3.407 0 0 0-3.407 3.407v3.143a3.406 3.406 0 0 0 3.407 3.407m55.634 29.897H18.769a3.407 3.407 0 0 0-3.407 3.407v3.143a3.407 3.407 0 0 0 3.407 3.407h55.634a3.407 3.407 0 0 0 3.407-3.407h.015v-3.143h-.015a3.41 3.41 0 0 0-3.407-3.407M18.769 64.94h38.82a3.407 3.407 0 0 0 3.407-3.407V58.39a3.407 3.407 0 0 0-3.407-3.407h-38.82a3.407 3.407 0 0 0-3.407 3.407v3.143a3.407 3.407 0 0 0 3.407 3.407" />
+                    </svg>
+                </label>
                 <!-- Logo -->
                 <div class="logo">
                     <a href="#home">
@@ -49,12 +76,14 @@
                     </a>
                 </div>
                 <!-- navigation -->
-                <ul>
+                <ul id="nav-PC">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#feature">Features</a></li>
                     <li><a href="#resource">Resources</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li class="hide-on-pc-table separate"><a href="#!">Sign in</a></li>
+                    <li class="hide-on-pc-table"><a href="#!">Sign up</a></li>
                 </ul>
 
                 <div class="actions">
@@ -102,7 +131,7 @@
                     <p class="desc">More than 45,000+ companies trust besnik
 
                     </p>
-                    <p class="desc">
+                    <p class="desc hide-on-mobile ">
                         5 Star Ratings (2k+ Review)
 
                     </p>
@@ -259,7 +288,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="view-all hide-on-pc-table">
+                    <a href="#!" class="btn">
+                        View All Properties
+                    </a>
+                </div>
             </div>
+        </div>
         </div>
         <!-- Stats -->
         <div class="stats" id="resource">
@@ -365,7 +400,7 @@
     </main>
     <footer class="footer">
         <div class="content">
-            <div class="row">
+            <div class="row-top">
                 <div class="column">
                     <h3 class="heading">Product</h3>
                     <ul class="list">
@@ -433,12 +468,17 @@
                     </div>
                 </div>
             </div>
-            <div class="row row-bottom">
+            <div class="row-top row-bottom">
                 <img src="./assets/image/logo.svg" alt="Besnik" class="logo">
                 <p class="copyright">Copyright 2020.com, All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <script>
+        const navPC = document.querySelector('#nav-PC');
+        const navMobile = document.querySelector('#nav-mobile');
+        navMobile.innerHTML = navPC.innerHTML;
+    </script>
 </body>
 
 </html>
