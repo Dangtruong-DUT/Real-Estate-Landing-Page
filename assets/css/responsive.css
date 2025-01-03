@@ -1,17 +1,249 @@
 /* PC */
 @media screen and (min-width:992.98px) {
-    
+    .mobile-header {
+        display: none;
+    }
+
+    .toggle-menu {
+        display: none;
+    }
+
+    .hide-on-pc-table {
+        display: none;
+    }
 }
+
 /* Tablet & Mobile */
 @media screen and (max-width:991px) {
-    
+    .navbar ul {
+        display: none;
+    }
+
+    .logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .toggle-menu {
+        color: #0F1B4C;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease-out;
+    }
+
+    .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        background-color: #fff;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+        padding: 25px 0 0 25px;
+    }
+
+    .menu-checkbox:checked~.menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-checkbox:checked~.menu-drawer {
+        transform: translateX(0);
+    }
+
+    .logo--mobile {
+        justify-content: flex-start;
+    }
+
+    .menu-drawer ul {
+        margin-top: 25px;
+    }
+
+    .menu-drawer ul a {
+        color: #333;
+        padding: 14px 0;
+        display: block;
+        font-weight: 500;
+    }
+
+    .separate {
+        border-top: 1px solid #ebebeb;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .hero-wrapper .info {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero-wrapper .desc {
+        width: 80%;
+        margin: 30px auto auto;
+    }
+
+    .clients .images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .guide-item {
+        margin: 0;
+        flex: 1;
+    }
+
+    .featured .list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats .row {
+        flex-direction: column;
+    }
+
+    .stats .img-block,
+    .stats .info {
+        width: 100%;
+    }
+
+    .stats .info {
+        padding: 0;
+        order: -1;
+    }
+
+    .stats .img-block {
+        margin-top: 80px;
+    }
+
+    .stats .sub-title {
+        width: 70%;
+    }
+
+    .stats .info .desc {
+        width: 100%;
+    }
+
+    .stats .row-quantity {
+        flex-direction: row;
+    }
+
+    .stats .qty {
+        font-size: 5rem;
+    }
+
+    .subscription .body .image {
+        display: none;
+    }
+
+    .footer .row-top {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        row-gap: 80px;
+    }
 }
+
 /* Tablet */
-@media screen and (min-width:768.98px) and (min-width: 991px) {
-    
-}
+@media screen and (min-width:768.98px) and (min-width: 991px) {}
 
 /* Mobile */
 @media screen and (max-width:767px) {
+    .hero-wrapper {
+        height: calc( 100vh - 85px);
+    }
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .menu-drawer {
+        inset: 0 30% 0 0;
+    }
+
+    .actions {
+        display: none;
+    }
+
+    .featured .list {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-wrapper .title {
+        font-size: 5.2rem;
+        margin-top: 20px;
+    }
+
+    .hero-wrapper .desc {
+        width: 100%;
+    }
+
+    .clients .logo {
+        justify-content: flex-start;
+    }
+
+    .clients .images {
+        row-gap: 20px;
+    }
+
+    .list-guide {
+        flex-direction: column;
+        row-gap: 60px;
+    }
+
+    .guide-cta {
+        margin-top: 60px;
+    }
+
+    .featured .row .link {
+        display: none;
+    }
+
+    .featured .view-all {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    .stats .sub-title {
+        width: 100%;
+    }
+
+    .stats .img-block .image {
+        width: 100%;
+    }
+
+    .stats .stats-trend {
+        top: 20px;
+        left: 20px;
+        border-radius: 12px;
+    }
+
+    .stats .row-quantity {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 60px;
+    }
+
+    .footer .row-top {
+        grid-template-columns: 1fr;
+    }
+
+    .subscription .info {
+        padding: 32px;
+    }
+
+    .subscription .body {
+        height: auto;
+    }
+    .footer .row-bottom {
+        row-gap: 20px;
+    }
 
 }
