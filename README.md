@@ -53,13 +53,13 @@ This landing page is designed for a fictional real estate service. It serves as 
 ---
 
 ## 📁 Folder Structure
-
+```
 Real-Estate-Landing-Page/
 ├── assets/
 │   └── css/
 ├── index.html              # Entry point of the website
 └── README.md               # This documentation file
-
+```
 ---
 
 ## 🚀 Getting Started
